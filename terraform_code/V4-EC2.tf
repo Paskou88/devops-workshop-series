@@ -23,9 +23,17 @@ provider "aws" {
   vpc_id = aws_vpc.dpp-vpc.id
 
    ingress {
-    description      = "Shh access"
+    description      = "ssh access"
     from_port        = 22
     to_port          = 22
+    protocol         = "tcp"
+    cidr_blocks      = ["0.0.0.0/0"]
+    }
+
+   ingress {
+    description      = "jenkins access"
+    from_port        = 8080
+    to_port          = 8080
     protocol         = "tcp"
     cidr_blocks      = ["0.0.0.0/0"]
     }

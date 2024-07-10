@@ -1,3 +1,3 @@
 FROM openjdk:17
-ADD target/devops-0.0.1-SNAPSHOT.jar  nitro.jar
+ADD jarstaging/com/example/devops/0.0.1-SNAPSHOT/devops-0.0.1-20240709.124645-1.jar  nitro.jar
 ENTRYPOINT [ "JAVA","-jar","nitro.jar" ]
